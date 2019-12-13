@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { SchedulerEvent, CreateFormGroupArgs } from '@progress/kendo-angular-scheduler';
 import { FormGroup, FormBuilder, Validators, ValidatorFn } from '@angular/forms';
 import { EditService } from './edit.service';
-import '@progress/kendo-date-math/tz/regions/Europe';
-import '@progress/kendo-date-math/tz/regions/NorthAmerica';
+
+// 這邊是載入時區
+import '@progress/kendo-date-math/tz/America/New_York';
 
 @Component({
   selector: 'app-root',
