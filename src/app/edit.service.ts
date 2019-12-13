@@ -29,8 +29,10 @@ const fields: SchedulerModelFields = {
 
 @Injectable({
   providedIn: 'root',
-})
+}) // 繼承 BaseEditService 當底層，保有 kendo 要用的東西
 export class EditService extends BaseEditService<MyEvent> {
+
+  // 提供 kendo 顯示 loading 特效
   public loading = false;
 
   constructor(private http: HttpClient) {

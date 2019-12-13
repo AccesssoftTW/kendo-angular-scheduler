@@ -11,50 +11,19 @@ import '@progress/kendo-date-math/tz/regions/NorthAmerica';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  // 預設日期
   public selectedDate: Date = new Date('2013-06-10T00:00:00');
+
+  // 要提供給 kendo 編輯用的
   public formGroup: FormGroup;
-
-  //   public events: SchedulerEvent[] = [{
-  //     id: 1,
-  //     title: 'Breakfast',
-  //     start: new Date('2018-10-22T09:00:00'),
-  //     end: new Date('2018-10-22T09:30:00'),
-  //     recurrenceRule: 'FREQ=DAILY;COUNT=5;'
-  // }];
-
-  // public group: any = {
-  //   resources: ['Rooms'],
-  //   orientation: 'horizontal'
-  // };
-
-  // public resources: any[] = [{
-  //   name: 'Rooms',
-  //   data: [
-  //     { text: 'Meeting Room 101', value: 1, color: '#6eb3fa' },
-  //     { text: 'Meeting Room 201', value: 2, color: '#f58a8a' }
-  //   ],
-  //   field: 'roomId',
-  //   valueField: 'value',
-  //   textField: 'text',
-  //   colorField: 'color'
-  // }, {
-  //   name: 'Attendees',
-  //   data: [
-  //     { text: 'Alex', value: 1, color: '#f8a398' },
-  //     { text: 'Bob', value: 2, color: '#51a0ed' },
-  //     { text: 'Charlie', value: 3, color: '#56ca85' }
-  //   ],
-  //   multiple: true,
-  //   field: 'attendees',
-  //   valueField: 'value',
-  //   textField: 'text',
-  //   colorField: 'color'
-  // }];
 
   constructor(private formBuilder: FormBuilder, public editService: EditService) {
   }
 
   public ngOnInit(): void {
+
+    // 先讀取資料
     this.editService.read();
   }
 
