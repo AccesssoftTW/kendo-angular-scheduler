@@ -5,23 +5,26 @@
   [modelFields]="editService.fields"
   [loading]="editService.loading"
   [selectedDate]="selectedDate"
+  timezone="America/New_York"
   style="height: 600px;">
 
-  <kendo-scheduler-week-view startTime="07:00">
-  </kendo-scheduler-week-view>
+<ng-template kendoSchedulerAllDayEventTemplate let-event="event">
+  <span style="color:yellow;font-size: 20px;">{{ event.title }}</span>
+</ng-template>
 
-  <kendo-scheduler-month-view>
-  </kendo-scheduler-month-view>
+<kendo-scheduler-week-view startTime="07:00">
+</kendo-scheduler-week-view>
 
-  <kendo-scheduler-timeline-view>
-  </kendo-scheduler-timeline-view>
+<kendo-scheduler-month-view>
+</kendo-scheduler-month-view>
 
-  <kendo-scheduler-day-view>
-  </kendo-scheduler-day-view>
+<kendo-scheduler-timeline-view>
+</kendo-scheduler-timeline-view>
 
-  <kendo-scheduler-agenda-view>
-  </kendo-scheduler-agenda-view>
+<kendo-scheduler-day-view>
+</kendo-scheduler-day-view>
+
+<kendo-scheduler-agenda-view>
+</kendo-scheduler-agenda-view>
 
 </kendo-scheduler>
-
-
